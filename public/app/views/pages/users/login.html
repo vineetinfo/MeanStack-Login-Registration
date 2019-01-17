@@ -1,0 +1,72 @@
+<div class="container">
+	<div class="page-header" >
+
+		<h1  style="color:red ;padding-top:20px;">Login Page</h1>
+	</div>
+	<form ng-submit="main.doLogin(loginData);">
+		<!-- username -->
+		<div class="col-md-12" style="padding-top: 10px;">
+			<div class="col-md-6">
+				<label  for="username" class="form-label">Username</label>
+			</div>
+			<div class="col-md-6">
+				<input type="text" id="username" value="username" placeholder="Enter Username" class="form-control" ng-model="main.loginData.username">
+			</div>
+		</div>
+
+		<div class="col-md-12" style="padding-top: 10px;">
+			<div class="col-md-6">
+				<!-- password -->
+				<label  for="password" class="form-label">Password</label>
+			</div>
+			<div class="col-md-6">
+				<input type="password" id="password" value="password" placeholder="Enter Password" class="form-control" ng-model="main.loginData.password">
+			</div>
+		</div>
+
+		<div class="col-md-12" style="padding-top: 10px;">
+			<div class="col-md-6">
+				<button type="submit" class="btn btn-success">Login</button>
+			</div>
+		</div>
+	</form>
+<div class="col-md-12">
+	<div class="jumbotron text-center" ng-show="main.loading" style="padding-top: 20px;">
+		<span class="glyphicon glyphicon-repeat spinner" ></span>
+		<p style="color:red;"> Loading.....</p>
+	</div>
+</div>
+
+
+<div class="col-md-12">
+	<div class="row show-hide-message" ng-show="main.successMsg" style="padding-top: 20px;">
+		<div class="alert alert-success">{{main.successMsg}}</div>
+	</div>
+</div>
+
+<div class="col-md-12">
+	<div class="row show-hide-message" ng-show="main.errorMsg" style="padding-top: 20px;">
+		<div class="alert alert-danger">{{main.errorMsg}}</div>
+	</div>
+</div>
+
+
+</div>
+
+
+
+<div class="col-md-6" style="padding-top: 30px;">
+<div class="panel panel-info">
+	<div class="panel-heading" style="text-align: center;"><strong>Login Details</strong></div>
+
+	<table class="table">
+		<tr>
+			<td><strong>Username</strong></td><td><strong>admin</strong></td>
+		</tr>
+		<tr>
+			<td><strong>Password</strong></td><td><strong>admin123</strong></td>
+		</tr>
+
+	</table>
+</div>
+</div>
